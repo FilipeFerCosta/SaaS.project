@@ -13,7 +13,15 @@ SECRET_KEY = 'django-insecure-jwlfzyb7)d@5r=r5)wnw6#98^lkyt2j5=5jt)qyh&8@5ra-yzx
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    ".local.techlabhub.com" # https://saas.prod.local.techlabhub.com
+    ]
+
+if DEBUG:
+    ALLOWED_HOSTS += [
+        "127.0.0.1",
+        "localhost"
+    ]
 
 
 # Application definition
